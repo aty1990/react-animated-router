@@ -1,0 +1,22 @@
+{
+  "name": "aty-react-router-animated",
+  "version": "1.0.0",
+  "description": "react-router页面转场动效",
+  "main": "AnimatedRouter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "router"
+  ],
+  "author": "aty",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">15.6.1",
+    "react-dom": ">15.6.1",
+    "prop-types": ">15.5.10",
+    "react-transition-group": ">2.0.0",
+    "react-router": ">4.0.0"
+  }
+}
