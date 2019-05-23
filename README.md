@@ -1,34 +1,34 @@
-# react-animated-router
+# aty-react-router-animated
 
 react 路由切换动画，支持嵌套路由 (nested routers)和动态路由（dynamic routers）。
 
 ### 安装
 
 ```bash
-npm install react-animated-router --save
+npm i aty-react-router-animated --save
 ```
 
 你可以直接通过`npm/yarn`安装，依赖包里带一个左右滑入滑出效果的`animate.css`，如果要使用该效果，需要在项目中一并引入。
 
 ```javascript
-import AnimatedRouter from 'react-animated-router'; //导入我们的的AnimatedRouter组件
-import 'react-animated-router/animate.css'; //导入默认的切换动画样式，如果需要其它切换样式，可以导入自己的动画样式定义文件
+import AnimatedRouter from 'aty-react-router-animated'; //导入我们的的AnimatedRouter组件
+import 'aty-react-router-animated/animate.css'; //导入默认的切换动画样式，如果需要其它切换样式，可以导入自己的动画样式定义文件
 ```
 
 如果想要自定义切换效果，可以将`animate.css`复制进自己的项目，并修改其中的动画样式定义（基于 css3 transition），并引入到项目中。
 
 > #### 小技巧
 >
-> 如果路由在多个页面文件中都有定义，为了避免每次都需要同时导入 react-animated-router 和 animate.css（如果只有一处引入 animate.css，其它地方不引入的话，在有 code split 的项目中，可能会有样式丢失），有两种办法可以优化：
+> 如果路由在多个页面文件中都有定义，为了避免每次都需要同时导入 aty-react-router-animated 和 animate.css（如果只有一处引入 animate.css，其它地方不引入的话，在有 code split 的项目中，可能会有样式丢失），有两种办法可以优化：
 >
-> *   一，将`animate.css`在入口文件中引入，其它地方可以只引用 react-animated-router
-> *   二，将 react-animated-router 和 animate.css 包装到一个模块文件中再默认导出，在其他地方引用该新模块：
+> *   一，将`animate.css`在入口文件中引入，其它地方可以只引用 aty-react-router-animated
+> *   二，将 aty-react-router-animated 和 animate.css 包装到一个模块文件中再默认导出，在其他地方引用该新模块：
 
 ```javascript
 // 自己项目中的AnimatedRouter模块
-import 'react-animated-router/animate.css'; //导入样式文件
+import 'aty-react-router-animated/animate.css'; //导入样式文件
 
-export { default } from 'react-animated-router'; //直接将react-animated-route作为默认导出
+export { default } from 'aty-react-router-animated'; //直接将react-animated-route作为默认导出
 ```
 
 然后就可以直接引用该文件来使用 AnimatedRouter 了，不必每次都引入`animate.css`。
@@ -55,8 +55,8 @@ export { default } from 'react-animated-router'; //直接将react-animated-route
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
-import AnimatedRouter from 'react-animated-router'; //导入我们的的AnimatedRouter组件
-import 'react-animated-router/animate.css'; //导入默认的切换动画样式，如果需要其它切换样式，可以导入自己的动画样式定义文件
+import AnimatedRouter from 'aty-react-router-animated'; //导入我们的的AnimatedRouter组件
+import 'aty-react-router-animated/animate.css'; //导入默认的切换动画样式，如果需要其它切换样式，可以导入自己的动画样式定义文件
 
 import Login from 'modules/Login';
 import Signup from 'modules/Signup';

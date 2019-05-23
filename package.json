@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aty1990/react-animated-router.git"
+  },
   "keywords": [
     "react",
     "router"
   ],
+  "homepage": "https://github.com/aty1990/react-animated-router/blob/master/README.md",
   "author": "aty",
   "license": "ISC",
   "peerDependencies": {
